@@ -92,6 +92,10 @@ parser.start_parsing = function(self)
     return
   end
 
+  if self.lnum == nil then
+    return
+  end
+
   if not vim.fn['filereadable'](self.file) then
     return
   end
